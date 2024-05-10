@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonListViewController" customModule="pokemon_app" customModuleProvider="target">
+            <connections>
+                <outlet property="nameTextField" destination="dZf-c6-qNJ" id="qLo-Kd-n5P"/>
+                <outlet property="tableView" destination="xOM-3c-k80" id="TT4-3l-2y6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokemon_logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="nP5-80-7XL">
+                    <rect key="frame" x="-3.6666666666666572" y="352.66666666666669" width="400.33333333333326" height="147"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="alpha">
+                            <real key="value" value="0.40000000000000002"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5IO-oP-sYH">
+                    <rect key="frame" x="0.0" y="67" width="393" height="751"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ih-NF-tE8">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CuZ-Vn-KPE">
+                                    <rect key="frame" x="8" y="8" width="377" height="44"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dZf-c6-qNJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="44"/>
+                                            <color key="backgroundColor" name="AccentColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="eHI-yv-qkA"/>
+                                            </constraints>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix1-CE-HXb">
+                                            <rect key="frame" x="306" y="0.0" width="71" height="44"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Search">
+                                                <fontDescription key="titleFontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                            </buttonConfiguration>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="searchActionHandler:" destination="-1" eventType="touchUpInside" id="2RH-Ko-HiI"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="CuZ-Vn-KPE" firstAttribute="top" secondItem="6ih-NF-tE8" secondAttribute="top" constant="8" id="GJv-DG-y5w"/>
+                                <constraint firstAttribute="trailing" secondItem="CuZ-Vn-KPE" secondAttribute="trailing" constant="8" id="KDB-xI-pHb"/>
+                                <constraint firstAttribute="bottom" secondItem="CuZ-Vn-KPE" secondAttribute="bottom" constant="8" id="gf6-I4-WVZ"/>
+                                <constraint firstItem="CuZ-Vn-KPE" firstAttribute="leading" secondItem="6ih-NF-tE8" secondAttribute="leading" constant="8" id="qNv-vn-hgN"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xOM-3c-k80">
+                            <rect key="frame" x="0.0" y="76" width="393" height="675"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nP5-80-7XL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5rG-KX-BYw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5IO-oP-sYH" secondAttribute="trailing" id="8aA-as-rJj"/>
+                <constraint firstItem="5IO-oP-sYH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="A5V-GT-yvp"/>
+                <constraint firstItem="nP5-80-7XL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AQn-ZB-TPH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5IO-oP-sYH" secondAttribute="bottom" id="JX1-d9-HHG"/>
+                <constraint firstItem="5IO-oP-sYH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="nrW-j0-hpV"/>
+            </constraints>
+            <point key="canvasLocation" x="59" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pokemon_logo.svg" width="400" height="147"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonInfoTableViewCell" rowHeight="70" id="KGk-i7-Jjw" customClass="PokemonInfoTableViewCell" customModule="pokemon_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LSq-sS-PtG">
+                        <rect key="frame" x="16" y="10" width="298" height="50"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCj-Kv-Ged">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aCj-Kv-Ged" secondAttribute="height" multiplier="1:1" id="WX3-Rc-C6K"/>
+                                    <constraint firstAttribute="width" constant="50" id="ddi-s6-gzi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcZ-Cp-gzp">
+                                <rect key="frame" x="66" y="13.333333333333334" width="232" height="23.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LSq-sS-PtG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3Pp-Na-ei3"/>
+                    <constraint firstAttribute="bottom" secondItem="LSq-sS-PtG" secondAttribute="bottom" constant="10" id="Zjs-tN-lNp"/>
+                    <constraint firstItem="LSq-sS-PtG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="b3B-ZO-Ews"/>
+                    <constraint firstAttribute="trailing" secondItem="LSq-sS-PtG" secondAttribute="trailing" constant="16" id="ylO-Ge-Wti"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="mainImage" destination="aCj-Kv-Ged" id="iwB-lB-N6Z"/>
+                <outlet property="nameLabel" destination="lcZ-Cp-gzp" id="VFL-iF-Mnd"/>
+            </connections>
+            <point key="canvasLocation" x="67.175572519083971" y="28.87323943661972"/>
+        </tableViewCell>
+    </objects>
+</document>
